@@ -1,0 +1,2 @@
+## Pages
+- [AeroVolt - Gerador Eólico Didático | Projeto DIY](/): Aprenda a construir um gerador eólico didático que acende LEDs com a força do vento. Guia completo passo a passo do projeto AeroVolt.
