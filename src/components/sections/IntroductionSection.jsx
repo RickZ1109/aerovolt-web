@@ -43,7 +43,7 @@ const IntroductionSection = () => {
             duration: 0.6,
             delay: 0.2
           }} className="rounded-xl overflow-hidden shadow-xl bg-gradient-to-br from-slate-100 to-blue-50">
-              <img className="w-full h-full object-cover aspect-video" alt="Detalhe do projeto AeroVolt" src="https://images.unsplash.com/photo-1616442288273-3ac2eaf1f8c4" />
+              <img className="w-full h-full object-cover aspect-video" alt="Detalhe do projeto AeroVolt" src="https://horizons-cdn.hostinger.com/175eb958-ff92-4b2f-b873-ce3ec5c8222b/whatsapp-image-2025-11-06-at-18.29.47-qlwTM.jpeg" />
             </motion.div>
           </div>
         </motion.div>

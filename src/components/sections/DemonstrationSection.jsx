@@ -1,18 +1,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Youtube } from 'lucide-react';
-import { useToast } from '@/components/ui/use-toast';
+import { Play } from 'lucide-react';
 
 const DemonstrationSection = () => {
-  const { toast } = useToast();
-
-  const handleVideoClick = () => {
-    toast({
-      title: "🎥 Slot de Vídeo",
-      description: "Insira aqui o link do YouTube da demonstração do projeto!",
-    });
-  };
+  const youtubeVideoId = 'arBppAyVq0s';
 
   return (
     <section id="demonstracao" className="section-padding bg-gradient-to-b from-slate-50 to-white">
@@ -34,7 +26,7 @@ const DemonstrationSection = () => {
             Veja o AeroVolt em ação. Demonstramos como os LEDs acendem progressivamente conforme a intensidade do vento aumenta. Isso ocorre porque o motor gera mais tensão quanto mais rápido ele gira.
           </p>
 
-          {/* Video Slot */}
+          {/* YouTube Video Embed */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -42,16 +34,15 @@ const DemonstrationSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <div 
-              onClick={handleVideoClick}
-              className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 to-slate-700 cursor-pointer group"
-            >
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
-                <Youtube size={80} className="mb-4 group-hover:scale-110 transition-transform" />
-                <p className="text-xl font-semibold">Clique para adicionar vídeo do YouTube</p>
-                <p className="text-slate-300 mt-2">Demonstração do AeroVolt em funcionamento</p>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-900 to-slate-700">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${youtubeVideoId}`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             </div>
           </motion.div>
 
@@ -63,10 +54,7 @@ const DemonstrationSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="rounded-2xl overflow-hidden shadow-2xl"
           >
-            <img 
-              className="w-full h-auto object-cover" 
-              alt="LEDs do AeroVolt acesos no escuro"
-             src="https://images.unsplash.com/photo-1438789782736-925a17ca5ac6" />
+            <img className="w-full h-auto object-cover" alt="LEDs do AeroVolt acesos no escuro" src="https://horizons-cdn.hostinger.com/175eb958-ff92-4b2f-b873-ce3ec5c8222b/projeto-ativo-AdKXH.jpeg" />
           </motion.div>
         </motion.div>
       </div>
